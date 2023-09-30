@@ -14,9 +14,9 @@ export const getPostMetadata = () => {
       img: matterResult.data.img,
       author: matterResult.data.author,
       slug: fileName.replace(".md", ""),
-      category: matterResult.data.category,
       tags: matterResult.data.tags
     };
   });
+
   return posts;
 };

@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "clsx": "^2.0.0",
     "gray-matter": "^4.0.3",
     "markdown-to-jsx": "^7.3.2",
     "next": "latest",

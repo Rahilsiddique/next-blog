@@ -3,7 +3,6 @@ title: "welcome to good life "
 author: "tripaloski"
 date: "1-10-23"
 tags: ["fun", "chill", "things"]
-category: "lifestyle"
 img: "posts/rahil/blog-one.jpg"
 ---
 

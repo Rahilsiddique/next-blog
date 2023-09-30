@@ -3,7 +3,6 @@ title: "Learning Next.js 13 by creating a static blog app"
 author: "rahil-siddique"
 date: "9-30-23"
 tags: ["tech", "react", "next", "fun"]
-category: coding
 img: "posts/rahil/blog-one.jpg"
 ---
 

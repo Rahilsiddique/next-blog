@@ -10,10 +10,12 @@ const page = () => {
   }, {});
 
   return (
-    <div className="flex gap-2 cursor-pointer">
+    <div className="flex justify-self-center gap-2 cursor-pointer max-w-2xl flex-wrap">
       {Object.entries(finalTags).map((e, i) => (
         <Link key={i} href={`tags/${e[0]}`}>
-          <div>{e[0] + " " + e[1]}</div>
+          <div className="border border-purple-400 px-2 rounded-lg hover:bg-purple-400">
+            {e[0] + " " + e[1]}
+          </div>
         </Link>
       ))}
     </div>

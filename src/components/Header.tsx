@@ -1,4 +1,7 @@
+"use client";
+import clsx from "clsx";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const Header = () => {
   const APP_ROUTE = [
@@ -19,13 +22,19 @@ const Header = () => {
       name: "About"
     }
   ];
+  const pathname = usePathname().toString();
   return (
-    <div>
+    <div className="flex justify-center py-5">
       <nav>
         <ul className="flex gap-4">
           {APP_ROUTE.map((e, i) => (
             <Link key={i} href={e.path}>
-              <li className="border-purple-300 cursor-pointer border-2 px-2 rounded-sm">
+              <li
+                className={clsx(
+                  `cursor-pointer px-2 hover:text-purple-400`,
+                  pathname === e.path ? `text-purple-400` : ``
+                )}
+              >
                 {e.name}
               </li>
             </Link>

@@ -1,17 +1,14 @@
+import PostPreview from "@/components/PostPreview";
 import { getPostsByTag } from "@/helper/getPostsByTag";
-import Link from "next/link";
 
 const page = (props: any) => {
   const [slug] = props.params.slug;
   const ans = getPostsByTag(slug);
-  console.log(slug);
 
   return (
-    <div className="flex flex-col">
-      {ans.map((e, i) => (
-        <Link key={i} href={`/${e?.author}/${e?.slug}`}>
-          {e?.title}
-        </Link>
+    <div className="grid grid-cols-2">
+      {ans.map((e: any, i: any) => (
+        <PostPreview {...e} key={i} />
       ))}
     </div>
   );

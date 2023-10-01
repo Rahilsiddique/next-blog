@@ -1,5 +1,13 @@
 import PostPreview from "@/components/PostPreview";
+import { getPostMetadata } from "@/helper/getPostMetadata";
 import { getPostsByAuthor } from "@/helper/getPostsByAuthor";
+
+export const generateStaticParams = async () => {
+  const posts = getPostMetadata();
+  return posts.map((post) => ({
+    slug: post.author
+  }));
+};
 
 const page = (props: any) => {
   const authorname = props.params.slug;

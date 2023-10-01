@@ -1,7 +1,7 @@
-import PostPreview from "@/components/PostPreview";
 import fs from "fs";
 import matter from "gray-matter";
 import Markdown from "markdown-to-jsx";
+import { getPostMetadata } from "@/helper/getPostMetadata";
 
 const getPortfolioContent = (slug: string) => {
   const folder = "src/posts";
@@ -9,6 +9,13 @@ const getPortfolioContent = (slug: string) => {
   const content = fs.readFileSync(file, "utf8");
   const matterResult = matter(content);
   return matterResult;
+};
+
+export const generateStaticParams = async () => {
+  const posts = getPostMetadata();
+  return posts.map((post) => ({
+    slug: [post.author, post.slug]
+  }));
 };
 
 const page = (props: any) => {

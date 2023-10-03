@@ -21,8 +21,8 @@ export default function RootLayout({
       <body className={inter.className + ` layout py-3 `}>
         <Header />
         {children}
+        <Footer />
       </body>
-      <Footer />
     </html>
   );
 }

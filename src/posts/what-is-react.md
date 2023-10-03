@@ -14,6 +14,17 @@ React is a free and open-source front-end JavaScript library for building user i
 
 ![react-image1](https://ares.decipherzone.com/blog-manager/uploads/banner_webp_da06d145-93f9-4df9-8c7e-1e2c332c3a4a.webp)
 
+## Advantages of ReactJS
+
+- Easy to Learn and USe.
+- Creating Dynamic Web Applications Becomes Easier.
+- Reusable Components.
+- Performance Enhancement.
+- The Support of Handy Tools.
+- Known to be SEO Friendly.
+- The Benefit of Having JavaScript Library.
+- Scope for Testing the Codes.
+
 ### I love REACT JS
 
 **Hey, do REACT!**

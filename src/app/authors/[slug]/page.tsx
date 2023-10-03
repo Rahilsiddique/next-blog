@@ -5,7 +5,7 @@ import { getPostsByAuthor } from "@/helper/getPostsByAuthor";
 export const generateStaticParams = async () => {
   const posts = getPostMetadata();
   return posts.map((post) => ({
-    slug: post.author
+    slug: post.author,
   }));
 };
 

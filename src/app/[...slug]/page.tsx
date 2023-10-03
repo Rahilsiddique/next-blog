@@ -2,10 +2,14 @@ import fs from "fs";
 import matter from "gray-matter";
 import Markdown from "markdown-to-jsx";
 import { getPostMetadata } from "@/helper/getPostMetadata";
+import { notFound } from "next/navigation";
 
 const getPortfolioContent = (slug: string) => {
   const folder = "src/posts";
   const file = `${folder}/${slug}.md`;
+  if (!slug || !fs.existsSync(file)) {
+    notFound()
+  }
   const content = fs.readFileSync(file, "utf8");
   const matterResult = matter(content);
   return matterResult;

@@ -18,8 +18,8 @@
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.10",
-    "@types/node": "latest",
-    "@types/react": "latest",
+    "@types/node": "20.8.2",
+    "@types/react": "18.2.24",
     "@types/react-dom": "latest",
     "autoprefixer": "latest",
     "eslint": "latest",
@@ -27,6 +27,6 @@
     "eslint-config-prettier": "^9.0.0",
     "postcss": "latest",
     "tailwindcss": "latest",
-    "typescript": "latest"
+    "typescript": "5.2.2"
   }
 }

@@ -5,3 +5,15 @@
 .layout {
   @apply mx-auto w-[86%] max-w-4xl md:w-full;
 }
+
+@layer components {
+  .author-card {
+    @apply md:mx-8 grid gap-4 md:gap-6 grid-cols-2 md:grid-cols-3;
+  }
+  .author-card-content {
+    @apply text-center flex flex-col items-center justify-between p-4 bg-purple-400 drop-shadow-md rounded-md;
+  }
+  .author-pfp {
+    @apply bg-white font-bold shadow-md w-14 h-14 text-3xl flex items-center justify-center rounded-full;
+  }
+}

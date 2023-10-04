@@ -18,7 +18,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className + ` layout py-3`}>
+      <body className={inter.className + ` layout py-3 `}>
         <Header />
         {children}
         <Footer />
@@ -26,3 +26,6 @@ export default function RootLayout({
     </html>
   );
 }
+
+
+

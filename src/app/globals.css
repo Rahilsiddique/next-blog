@@ -6,6 +6,7 @@
   @apply mx-auto w-[86%] max-w-4xl md:w-full;
 }
 
+
 @layer components {
   .author-card {
     @apply md:mx-8 grid gap-4 md:gap-6 grid-cols-2 md:grid-cols-3;

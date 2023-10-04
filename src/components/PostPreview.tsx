@@ -34,11 +34,7 @@ const PostPreview = ({ title, author, date, tags, img, key, slug }: any) => {
         </Link>
       </div>
       <div className="flex gap-2 items-center font-normal text-gray-500">
-        <Link
-          className="flex gap-2 items-center"
-          href={`authors/${author}`}
-          passHref
-        >
+        <Link className="flex gap-2 items-center" href={`/authors/${author}`}>
           <div className="author-pfp bg-blue-400 text-xs text-black w-5 h-5">
             {author.charAt(0).toUpperCase()}
           </div>

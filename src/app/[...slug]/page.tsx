@@ -8,7 +8,7 @@ const getPortfolioContent = (slug: string) => {
   const folder = "src/posts";
   const file = `${folder}/${slug}.md`;
   if (!slug || !fs.existsSync(file)) {
-    notFound()
+    notFound();
   }
   const content = fs.readFileSync(file, "utf8");
   const matterResult = matter(content);
@@ -26,8 +26,8 @@ const page = (props: any) => {
   const slug = props.params.slug;
   const post = getPortfolioContent(slug.toString().split(",")[1]);
   return (
-    <div>
-      <article className="prose lg:prose-xl">
+    <div className="flex flex-col items-center">
+      <article className="prose">
         <Markdown>{post.content}</Markdown>
       </article>
     </div>

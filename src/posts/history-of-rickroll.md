@@ -2,7 +2,7 @@
 title: "History of rickroll"
 author: "amir-kamal"
 date: "10-1-23"
-tags: ["fun", "rickroll", "Never gonna give you up"]
+tags: ["fun", "rickroll", "Never-gonna-give-you-up"]
 img: "posts/amir/rick-roll.webp"
 ---
 

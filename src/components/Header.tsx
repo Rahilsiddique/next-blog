@@ -31,8 +31,8 @@ const Header = () => {
             <Link key={i} href={e.path}>
               <li
                 className={clsx(
-                  `cursor-pointer px-2 hover:text-purple-400`,
-                  pathname === e.path ? `text-purple-400` : ``
+                  `cursor-pointer px-2 hover:text-blue-400`,
+                  pathname === e.path ? `text-blue-400` : ``
                 )}
               >
                 {e.name}

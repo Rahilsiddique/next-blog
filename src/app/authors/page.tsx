@@ -22,7 +22,7 @@ const page = () => {
               {e.author}
             </div>
           </Link>
-          <p className="text-xs md:text-sm font-medium">
+          <p className="text-xs md:text-sm font-medium text-gray-500">
             Blogs by author: {e.posts.length}
           </p>
         </div>

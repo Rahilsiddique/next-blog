@@ -1,8 +1,3 @@
-import React from "react";
-import FacebookIcon from "../components/Svg/facebook";
-import InstagramIcon from "../components/Svg/instagram";
-import TwitterIcon from "../components/Svg/twitter";
-import GitHubIcon from "../components/Svg/github";
 import Link from "next/link";
 
 const Footer = () => {

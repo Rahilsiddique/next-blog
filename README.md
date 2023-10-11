@@ -7,12 +7,12 @@
 3. Install all the dependencies `npm install`
 4. Run locally `npm run dev`
 
-### Project Structure
+### Routes 
 
-1. `www.url.com` --> main page contain all blog post by different authors
-2. `www.url.com/authors` --> view all authers
-3. `www.url.com/authors/[author-name]` --> auther profile with all posts
-4. `www.url.com/authors/[author-name]/[author-blog]` --> particular blog by author
-5. `www.url.com/tags` --> view all tags
-6. `www.url.com/tags/[tags]` --> all blogs with selected tag
-7. `www.url.com/about` --> About page
+1. `/` --> main page contains all the blog post by authors
+2. `/authors` --> view all authers
+3. `/authors/[author-name]` --> auther profile with all posts
+4. `/[author-name]/[author-blog]` --> particular blog by author
+5. `/tags` --> view all tags
+6. `/tags/[tags]` --> all blogs with selected tag
+7. `/about` --> About page

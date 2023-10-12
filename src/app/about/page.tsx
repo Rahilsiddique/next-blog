@@ -29,15 +29,18 @@ const page = () => {
                 Organisation :
               </p>
               <div className="flex">
-              <a href="https://opensource.tcetmumbai.in/">
-                <img
-                  src="https://opensource.tcetmumbai.in/img/logo.png"
-                  height={40}
-                  width={40}
-                  alt="tcetopensource"
-                />
-              </a>
-              <p className="lg:text-lg font-medium mt-[6px] px-2 sm:text-sm ">TCET Opensource</p>
+                <a href="https://opensource.tcetmumbai.in/" className="flex">
+                  <img
+                    src="https://opensource.tcetmumbai.in/img/logo.png"
+                    height={40}
+                    width={40}
+                    alt="tcetopensource"
+                  />
+
+                  <p className="text-sm mt-[8px] px-2 underline ">
+                    TCET Opensource
+                  </p>
+                </a>
               </div>
             </div>
           </div>

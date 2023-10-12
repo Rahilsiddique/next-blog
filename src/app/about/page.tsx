@@ -4,11 +4,11 @@ const page = () => {
   return (
     <div>
       <section className="bg-white">
-        <div className="gap-16 items-center py-8 px-4 mx-auto border border-gray-400 shadow-md rounded-2xl max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
+        <div className="gap-16 items-center py-8 px-4 mx-auto border border-gray-400 shadow-md rounded-2xl max-w-screen-xl lg:grid lg:grid-cols-2 md:mx-20 lg:py-16 lg:px-6">
           <div className="font-light text-gray-600 sm:text-lg">
-            <h2 className="mb-4 text-6xl tracking-tight font-extrabold text-gray-900">
+            <p className="mb-4 text-4xl font-extrabold text-gray-900 sm:text-5xl">
               About us
-            </h2>
+            </p>
             <p className="mb-4">
               Next-Blog is a project made with Next.js intended to help you
               learn Next.js, Especially for Front-End Peeps From TOS. An

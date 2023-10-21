@@ -28,7 +28,7 @@ export const metadata = {
 export default function Home() {
   const posts = getPostMetadata();
   return (
-    <main className="grid lg:grid-cols-2 gap-6 py-2">
+    <main className=" grid lg:grid-cols-2 sm:grid-cols-1 md:grid-cols-2 md:mx-6 sm:mx-24 gap-6 py-2">
       {posts.map((e, i) => (
         <PostPreview {...e} key={i} />
       ))}

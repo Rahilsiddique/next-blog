@@ -10,7 +10,7 @@ const PostPreview = ({ title, author, date, tags, img, key, slug }: any) => {
   });
   return (
     <div key={key} className="flex flex-col gap-2">
-      <div className="lg:h-64 lg:w-auto h-40 w-72 overflow-hidden relative rounded-lg">
+      <div className="lg:h-64 lg:w-auto h-40 w-80 overflow-hidden relative rounded-lg">
         <Image
           src={"/" + img}
           alt="img"
@@ -24,7 +24,7 @@ const PostPreview = ({ title, author, date, tags, img, key, slug }: any) => {
           <Tag key={i} tag={e} />
         ))}
       </div>
-      <div className="font-semibold text-xl lg:truncate">
+      <div className="font-semibold text-xl line-clamp-1 pr-10">
         <Link
           href={`/${author}/${slug}`}
           data-te-toggle="tooltip"

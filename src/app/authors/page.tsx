@@ -18,11 +18,11 @@ const page = () => {
         <div className="author-card-content" key={i}>
           <div className="author-pfp">{e.author.charAt(0).toUpperCase()}</div>
           <Link href={`authors/${e.author}`} passHref>
-            <div className="cursor-pointer font-semibold hover:underline md:text-xl">
+            <div className="cursor-pointer hover:underline md:text-xl font-semibold">
               {e.author}
             </div>
           </Link>
-          <p className="text-xs md:text-sm font-medium text-gray-500">
+          <p className="text-xs md:text-sm font-medium text-gray-200">
             Blogs by author: {e.posts.length}
           </p>
         </div>

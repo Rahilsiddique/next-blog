@@ -5,7 +5,7 @@ interface searchProps {
   searchParams: { ascDesc?: string };
 }
  const page = ({ searchParams }: searchProps) => {
-  const ascDesc = searchParams.ascDesc;
+  const ascDesc = searchParams.ascDesc || "asc";
   const toggleOptions = ["asc", "desc"];
   const data = getPostMetadata();
   const tags = data.flatMap((e) => e.tags.flat((tag: any) => tag));

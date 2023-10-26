@@ -4,7 +4,7 @@ import Link from "next/link";
 interface searchProps {
   searchParams: { ascDesc?: string };
 }
-export default async function tagPage({ searchParams }: searchProps) {
+export default async function page({ searchParams }: searchProps) {
   const ascDesc = searchParams.ascDesc;
   const toggleOptions = ["asc", "desc"];
   const data = getPostMetadata();

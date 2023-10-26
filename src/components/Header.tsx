@@ -22,7 +22,7 @@ const Header = () => {
       name: "About"
     }
   ];
-  const pathname = usePathname().toString();
+  const pathname = usePathname()?.toString();
   return (
     <div className="flex justify-center py-5">
       <nav>

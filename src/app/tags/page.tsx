@@ -4,6 +4,8 @@ import Link from "next/link";
 interface searchProps {
   searchParams: { ascDesc?: string };
 }
+export const dynamic='force-dynamic';
+
  const page = ({ searchParams }: searchProps) => {
   const ascDesc = searchParams?.ascDesc || "asc";
   const toggleOptions = ["asc", "desc"];

@@ -2,7 +2,7 @@ import { getPostMetadata } from "@/helper/getPostMetadata";
 import Link from "next/link";
 
 interface searchProps {
-  searchParams: { ascDesc?: string };
+  searchParams: { ascDesc?: string | undefined};
 }
 export const dynamic='force-dynamic';
 

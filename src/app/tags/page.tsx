@@ -2,31 +2,40 @@ import { getPostMetadata } from "@/helper/getPostMetadata";
 import Link from "next/link";
 
 interface searchProps {
-  searchParams: { ascDesc?: string | undefined};
+  searchParams: { sort?: string | undefined };
 }
-export const dynamic='force-dynamic';
+export const dynamic = "force-dynamic";
 
- const page = ({ searchParams }: searchProps) => {
-  const ascDesc = searchParams?.ascDesc || "asc";
-  const toggleOptions = ["asc", "desc"];
-  const data = getPostMetadata();
-  const tags = data.flatMap((e) => e.tags.flat((tag: any) => tag));
-  const finalTags = tags.reduce((acc: any, curr: any) => {
-    acc[curr] = (acc[curr] || 0) + 1;
-    return acc;
-  }, {});
+const page = ({ searchParams }: searchProps) => {
+  const sortType = searchParams.sort || "alphabet";
+  const toggleOptions = ["alphabet", "asc", "desc"];
+  const data = getPostMetadata() as any[];
+  const tags = data.flatMap((e: any) => e.tags.flat((tag: any) => tag));
+  const finalTags: { [key: string]: number } = tags.reduce(
+    (acc: { [key: string]: number }, curr: any) => {
+      acc[curr] = (acc[curr] || 0) + 1;
+      return acc;
+    },
+    {}
+  );
   const sortedList = [...Object.entries(finalTags)].sort((a, b) => {
-    if (ascDesc === "asc") return a[0].localeCompare(b[0]);
-    else return b[0].localeCompare(a[0]);
+    if (sortType === "alphabet") return a[0].localeCompare(b[0]);
+    else if (sortType === "asc") return a[1] - b[1];
+    else return b[1] - a[1];
   });
+
   return (
     <div className="flex justify-self-center gap-2 cursor-pointer max-w-2xl flex-wrap">
       <div>
         <label>Sort Order: </label>
 
         {toggleOptions.map((option, i) => (
-          <Link href={`?ascDesc=${option}`} key={i}>
-            {option === "asc" ? "Ascending" : "Descending"}
+          <Link href={`?sort=${option}`} key={option}>
+            {option === "asc"
+              ? "Ascending"
+              : option === "desc"
+              ? "Descending"
+              : "Alphabetical"}
           </Link>
         ))}
       </div>
@@ -40,6 +49,6 @@ export const dynamic='force-dynamic';
       ))}
     </div>
   );
-}
+};
 
 export default page;

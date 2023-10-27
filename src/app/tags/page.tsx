@@ -7,7 +7,6 @@ type searchProps = {
   };
 };
 
-export const dynamic = "force-dynamic";
 
 const page = ({ searchParams }: searchProps) => {
   const sortType = searchParams?.sort || "alphabet";

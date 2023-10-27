@@ -1,13 +1,16 @@
 import { getPostMetadata } from "@/helper/getPostMetadata";
 import Link from "next/link";
 
-interface searchProps {
-  searchParams: { sort?: string | undefined };
-}
+type searchProps = {
+  searchParams?: {
+    sort?: string;
+  };
+};
+
 export const dynamic = "force-dynamic";
 
 const page = ({ searchParams }: searchProps) => {
-  const sortType = searchParams.sort || "alphabet";
+  const sortType = searchParams?.sort || "alphabet";
   const toggleOptions = ["alphabet", "asc", "desc"];
   const data = getPostMetadata() as any[];
   const tags = data.flatMap((e: any) => e.tags.flat((tag: any) => tag));

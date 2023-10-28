@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, SetStateAction } from "react";
 import Link from "next/link";
 
 const Page = () => {
@@ -29,7 +29,7 @@ const Page = () => {
     else return b[1] - a[1];
   });
 
-  const handleSortChange = (e) => {
+  const handleSortChange = (e:React.ChangeEvent<HTMLSelectElement>) => {
     setSortType(e.target.value);
   };
 
